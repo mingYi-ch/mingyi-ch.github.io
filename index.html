@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Zurich Drifter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-      h2 {
-        
-      }
-    </style>
-  </head>
-  <body>
-    <h2>Rehearsal Plan</h2>
-    <ul> <!-- changed to list in the tutorial -->
-    <li>
-      <!-- <div class="container"> -->
-        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#songs"> 我还年轻 我还年轻 </button>
-        <div id="songs" class="collapse">
-          <ul>
-            <li>REHEARSAL TIME: 9th Oct，16th Oct，w/o cello</li>
-            <li>SONG VERSION TO BE COVERED: <a href="https://youtu.be/NbNPJr_0tqA" class="btn btn-info">ALBUM VERSION</a>
-            <li>LEADER SINGER: 于源</li>
-            <li>DRUMMER: 李程/闻彪</li>
-            <li>CELLO: 张孟陶</li>
-            <li>BASSIST: 闫徐乾(tentative)</li>
-            <li>GUITARISTS: 董逸飞, 易明</li>
-          </ul> 
-        </div>
-      <!-- </div> -->
-    </li>
-      <li>月半小夜曲</li>
-      <li>
-        <label for="songs">待定:</label>
-        <select name="songs" id="cars">
-          <option value="蓝莲花">蓝莲花</option>
-          <option value="故乡">故乡</option>
-          <option value="像风一样自由">像风一样自由</option>
-        </select>
-      </li>
-      <li>
-        <label for="songs">待定:</label>
-        <select name="songs" id="cars">
-          <option >躺在你的衣柜</option>
-          <option >百年孤寂</option>
-        </select>
-      </li>
-      <li>无地自容</li>
+<head>
+<style>
+h1 {
+  text-align: center;
 
+  margin-top: 10vh;
+}
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 20%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) BREAK THE NORNAL LINE OF FLOW */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgba(190, 190, 89, 0.3); /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 1%;
+
+}
+
+/* Style page content */
+.main {
+  margin-left: 20%; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <h1>Ming Yi</h1> 
+  <img src="" alt="My alias"/>
+  <!-- nav tag starts -->
+    <nav>
+    <ul>
+      <a href="#">Home</a> <br/>
+      <a href="#">Interview</a> <br/>
+      <a href="#">Languages</a> <br/>
+      <a href="#">Data Structure</a> <br/>
+      <a href="#">Algorithm</a>
     </ul>
+  </nav>
+  <!-- nav tag ends -->
+  </div>
 
-    <!-- <button>ROCK</button>
-    <script  src = "scripts/main.js"></script> -->
-  </body>
+  <!-- Page content -->
+<div class="main">
+  ...
+</div>
+
+</body>
 </html>
