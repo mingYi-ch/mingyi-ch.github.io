@@ -8,8 +8,14 @@ h1 {
   margin-top: 10vh;
 }
 
+.img_sy {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  
+}
 .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
+  height: 100vh; /* Full-height: remove this if you want "auto" height */
   width: 20%; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) BREAK THE NORNAL LINE OF FLOW */
   z-index: 1; /* Stay on top */
@@ -18,26 +24,47 @@ h1 {
   background-color: rgba(190, 190, 89, 0.3); /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 1%;
+  text-align: center;
 
 }
 
 /* Style page content */
 .main {
-  margin-left: 20%; /* Same as the width of the sidebar */
+  margin-left: 20%;
   padding: 0px 10px;
+  clear: right;
 }
 
 body {
     margin: 0px;
     height: 100%;
 }
+
+.floatLeft{
+  float:left;
+  width: 30%;
+  background-color: rgb(112, 134, 203);
+}
+
+.floatRight{
+  float:right;
+  width: 30%;
+  height:30vh;
+  
+  background-color: rgb(112, 134, 203);
+}
+ .text {
+  font-family: sans-serif;
+  clear:right;
+ }
 </style>
 </head>
 <body>
 
+<!-- Sidebar -->
 <div class="sidenav">
-  <h1>Ming Yi</h1> 
-  <img src="" alt="My alias"/>
+  <h1>L F</h1> 
+  <img class = "img_sy" src="images/sy_01.jpeg" alt="My alias"/>
   <!-- nav tag starts -->
     <nav>
     <ul>
@@ -50,10 +77,120 @@ body {
   </nav>
   <!-- nav tag ends -->
   </div>
-
-  <!-- Page content -->
+  
+<!-- Page content -->
 <div class="main">
-  ...
+  <div class = "floatLeft">
+    Float1
+  </div>
+  <div class = "floatRight" >
+    Float2
+    <!-- <img  src="images/sy_01.jpeg" alt="My alias"/> -->
+  </div>
+  <p class = "text">
+    CSS (siglas en inglés de Cascading Style Sheets), en español «Hojas de estilo en cascada», es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.2​ Es muy usado para establecer el diseño visual de los documentos web, e interfaces de usuario escritas en HTML o XHTML; el lenguaje puede ser aplicado a cualquier documento XML, incluyendo XHTML, SVG, XUL, RSS, etcétera. Junto con HTML y JavaScript, CSS es una tecnología usada por muchos sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web y GUIs para muchas aplicaciones móviles (como Firefox OS).3​
+
+  CSS está diseñado principalmente para marcar la separación del contenido del documento y la forma de presentación de este, características tales como las capas o layouts, los colores y las fuentes.4​ Esta separación busca mejorar la accesibilidad del documento, proveer más flexibilidad y control en la especificación de características presentacionales, permitir que varios documentos HTML compartan un mismo estilo usando una sola hoja de estilos separada en un archivo .css, y reducir la complejidad y la repetición de código en la estructura del documento.
+
+  La separación del formato y el contenido hace posible presentar el mismo documento marcado en diferentes estilos para diferentes métodos de renderizado, como en pantalla, en impresión, en voz (mediante un navegador de voz o un lector de pantalla), y dispositivos táctiles basados en el sistema Braille. También se puede mostrar una página web de manera diferente dependiendo del tamaño de la pantalla o tipo de dispositivo. Los lectores pueden especificar una hoja de estilos diferente, como una hoja de estilos CSS guardado en su computadora, para sobreescribir la hoja de estilos del diseñador.
+
+  La especificación CSS describe un esquema prioritario para determinar qué reglas de estilo se aplican si más de una regla coincide para un elemento en particular. Estas reglas son aplicadas con un sistema llamado de cascada, de modo que las prioridades son calculadas y asignadas a las reglas, así que los resultados son predecibles.
+
+  La especificación CSS es mantenida por el World Wide Web Consortium (W3C). El MIME type text/css está registrado para su uso por CSS descrito en el RFC 2318.5​ El W3C proporciona una herramienta de validación de CSS gratuita para los documentos CSS.
+  </p>
+
+Índice
+1	Sintaxis
+1.1	Selectores
+1.2	Bloque de declaraciones
+1.3	Uso
+1.4	Fuentes
+1.5	Especificidad
+1.5.1	Ejemplo
+1.6	Herencia
+1.6.1	Ejemplo
+1.7	Espacios en blanco
+1.8	Posicionamiento
+1.8.1	Propiedades de posicionamiento
+1.8.2	Float y clear
+2	Historia
+3	Niveles
+3.1	CSS1
+3.2	CSS2
+3.2.1	CSS 2.1
+3.3	CSS3
+3.4	CSS4
+4	Soporte por los navegadores web
+5	Limitaciones
+6	Limitaciones resueltas
+7	Ventajas
+8	Framework CSS
+9	Véase también
+10	Referencias
+11	Enlaces externos
+Sintaxis
+CSS tiene una sintaxis simple y usa un conjunto de palabras clave en inglés para especificar los nombres de varias propiedades de estilo. Una hoja de estilos consiste en una serie de reglas. Cada regla, o conjunto de reglas consisten en uno o más selectores, y un bloque de declaración.
+
+Selectores
+Artículo principal: Selector CSS
+Los selectores declaran qué etiquetas se le aplican a los estilos que coincidan con la etiqueta o atributo señalados en la regla.
+
+Los selectores pueden aplicarse a:
+
+Todos los elementos de un tipo, como los párrafos <p>.
+Elementos seguidos de un atributo, en particular:
+id: identificador, un identificador único para la etiqueta.
+class: clase, un identificador para anotar múltiples elementos.
+Las clases y los identificadores son sensibles a las mayúsculas, comienzan con letras, y pueden incluir caracteres alfanuméricos y guiones bajos. Una clase se aplica a cualquier número de elementos. Un identificador se aplica a un solo elemento.
+
+Las pseudoclases son usadas en los selectores CSS para permitir el formateo usando información que no está incluida en el documento. Un ejemplo de una pseudoclase muy usada es :hover, que identifica el contenido que está siendo apuntado por un puntero, como el cursor del ratón. Este nombre se añade al selector, de esta manera: a:hover o #elementid:hover. Una pseudoclase clasifica elementos, como :link o :visited, mientras que un pseudoelemento hace una selección de elementos parciales, como ::first-line o ::first-letter.
+
+Los selectores pueden ser combinados de muchas maneras para obtener una mayor flexibilidad y precisión. Múltiples selectores pueden ser unidos en una misma línea para especificar elementos por su ubicación, tipo de elemento, identificador, clase, o cualquier combinación de estos. El orden de los selectores es importante. Por ejemplo, div.myClass {color: red;} aplica a todos los elementos <div> con la clase myClass, mientras que.myClass div {color: red;} aplica a todos los elementos <div> que estén dentro de cualquier elemento con la clase myClass.
+
+La tabla siguiente proporciona un resumen de la sintaxis de los diversos selectores, indicando su forma de uso y la versión de CSS en la que fueron introducidos:
+
+Patrón	Significado	Nivel CSS
+de aparición
+E	un elemento de tipo E	1
+E:link	un elemento E que es un enlace que no ha sido visitado (:link) o ya fue visitado (:visited)	1
+E:active	un elemento E que está realizando cierta acción por parte del usuario	1
+E::first-line	la primera línea formateada de un elemento E	1
+E::first-letter	la primera letra formateada de un elemento E	1
+.c	todos los elementos con class="c"	1
+#myid	el elemento con id="myid"	1
+E.warning	un elemento E que pertenece a la clase "warning"	1
+E#myid	un elemento E cuyo id sea "myid"	1
+E F	un elemento F descendiente de un elemento E	1
+*	cualquier elemento	2
+E[foo]	un elemento E con un atributo "foo"	2
+E[foo="bar"]	un elemento E cuyo atributo "foo" tiene un valor exacto de "bar"	2
+E[foo~="bar"]	un elemento E cuyo atributo "foo" tiene una lista de valores separados por espacios, y uno de ellos es "bar"	2
+E:first-child	el primer hijo de un elemento E	2
+E:lang(eo)	un elemento E cuyo idioma esté especificado en "eo"	2
+E::before	contenido generado antes del contenido del elemento E	2
+E::after	contenido generado después del contenido del elemento E	2
+E > F	un elemento F hijo de un elemento E	2
+E + F	un elemento E inmediatamente sucedido de un elemento F	2
+E[foo^="bar"]	un elemento E cuyo atributo "foo" tenga un valor que comience exactamente con la cadena "bar"	3
+E[foo$="bar"]	un elemento E cuyo atributo "foo" tenga un valor que finalice exactamente con la cadena "bar"	3
+E[foo*="bar"]	un elemento E cuyo atributo "foo" tenga un valor que contenga la subcadena "bar"	3
+E:root	un elemento E en la raíz del documento	3
+E:nth-child(n)	un elemento E, el n-esimo hijo de este	3
+E:nth-last-child(n)	un elemento E, el n-esimo hijo de este, contando desde el último hijo	3
+E:nth-of-type(n)	un elemento E, el n-esimo hijo de este, contando solo los del mismo tipo que el padre	3
+E:nth-last-of-type(n)	un elemento E, el n-esimo hijo de este, contando solo los del mismo tipo que el padre, y desde el último hijo	3
+E:last-child	el último hijo de un elemento E	3
+E:first-of-type	un elemento E, los primeros hermanos de su tipo	3
+E:last-of-type	un elemento E, los últimos hermanos de su tipo	3
+E:only-child	el único hijo del elemento E	3
+E:only-of-type	el único hermano del elemento E	3
+E:empty	un elemento E que no posea hijos (incluyendo nodos de texto)	3
+E:target	un elemento E de enlace siendo pulsado	3
+E:enabled	un elemento E de interfaz de usuario habilitado	3
+E:disabled	un elemento E de interfaz de usuario deshabilitado	3
+E:checked	un elemento E de interfaz de usuario marcado (válido para los checkboxs y los radiobuttons)	3
+E:not(s)	un elemento E que no coincide con el selector simple s	3
+E ~ F	un elemento E sucedido de un elemento F
 </div>
 
 </body>
