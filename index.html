@@ -2,92 +2,26 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-  h1 {
-    text-align: center;
-
-    margin-top: 10vh;
-  }
-
-  .img_sy {
-    height: 130px;
-    width: 130px;
-    border-radius: 50%;
-    
-  }
-  .sidenav {
-    height: 100vh; /* Full-height: remove this if you want "auto" height */
-    width: 20%; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) BREAK THE NORNAL LINE OF FLOW */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: rgba(190, 190, 89, 0.3); /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 1%;
-    text-align: center;
-
-  }
-
-  /* Style page content */
-  .main {
-    margin-left: 20%;
-    padding: 0px 10px;
-    clear: right;
-  }
-
-  body {
-      margin: 0px;
-      height: 100%;
-  }
-
-  .floatLeft{
-    float:left;
-    width: 30%;
-    background-color: rgb(112, 134, 203);
-  }
-
-  .floatRight{
-    float:right;
-    width: 30%;
-    height:30vh;
-    
-    background-color: rgb(112, 134, 203);
-  }
-  .text {
-    font-family: sans-serif;
-    clear:right;
-  }
-  </style>
+  <link rel = "stylesheet" href="styles/style.css"/>
 </head>
 <body>
+  <script src = "scripts/nav.js"> </script>
 
 <!-- Sidebar -->
-<div class="sidenav">
-  <h1>L F</h1> 
-  <img class = "img_sy" src="images/sy_01.jpeg" alt="My alias"/>
-  <!-- nav tag starts -->
-    <nav>
-    <ul>
-      <a href="#">Home</a> <br/>
-      <a href="#">Interview</a> <br/>
-      <a href="#">Languages</a> <br/>
-      <a href="#">Data Structure</a> <br/>
-      <a href="#">Algorithm</a>
-    </ul>
+<div id="mySidebar" class="sidebar">
+  <nav>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
   </nav>
-  <!-- nav tag ends -->
-  </div>
+</div>
+
   
 <!-- Page content -->
-<div class="main">
-  <div class = "floatLeft">
-    Float1
-  </div>
-  <div class = "floatRight" >
-    Float2
-    <!-- <img  src="images/sy_01.jpeg" alt="My alias"/> -->
-  </div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
   <p class = "text">
     CSS (siglas en inglés de Cascading Style Sheets), en español «Hojas de estilo en cascada», es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.2​ Es muy usado para establecer el diseño visual de los documentos web, e interfaces de usuario escritas en HTML o XHTML; el lenguaje puede ser aplicado a cualquier documento XML, incluyendo XHTML, SVG, XUL, RSS, etcétera. Junto con HTML y JavaScript, CSS es una tecnología usada por muchos sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web y GUIs para muchas aplicaciones móviles (como Firefox OS).3​
 
