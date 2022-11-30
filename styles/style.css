@@ -1,4 +1,28 @@
 
+/* Declare variable */
+:root {
+  --headerHeight: 60px;
+  --sidebar-top: 61px;
+  --mainMarginTop:65px;
+}
+
+.logo {
+  border-radius: 8px; 
+  width: 80px;
+  height: 50px;
+}
+
+.name{
+  font-size: 2em;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.894);
+}
+
+.logoName{
+  display: flex;
+  align-items: center;
+
+}
 /* The sidebar links */
 .sidebar a {
   padding: 8px 8px 8px 32px;
@@ -11,43 +35,40 @@
 
 /* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: goldenrod;
 }
 
 /* Position and style the close button (top right corner) */
 .sidebar {
-  position: absolute;
+  position: fixed;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.952);
-  /* top: 0; */
+  background-color: rgba(253, 253, 253, 0.952);
   font-size: 36px;
   height: 100%;
-  width:100%;
-  margin-top:60px;
+  width: 100%;
+  top: var(--sidebar-top);
   display: none;
 }
 
 .header {
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
-  height: 30px;
+  height: var(--headerHeight);
   /* font-size: 20px; */
   cursor: pointer;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: black;
-  padding: 10px 15px;
-  border-right: none ;
+  /* border-right: none ; */
   /* text-align: center; */
   border-bottom: 0.01px solid rgba(0, 0, 0, 0.546) ;
-  margin:0;
+  top:0;
 }
 
-.logo {
-  margin-top: 0px;
-}
+
 /* Mobile: The button used to open the sidebar */
 #navBtn {
   /* width: 100%; */
@@ -58,7 +79,7 @@
   /* padding: 10px 15px; */
   margin-right: 20px;
   border: none;
-  margin-top: 0px;
+  
 }
 
 #navBtn:hover {
@@ -67,6 +88,7 @@
 
 /* Style page content */
 #main {
+  margin-top: var(--mainMarginTop);
   transition: margin-left .3s; /* If you want a transition effect */
 }
 
