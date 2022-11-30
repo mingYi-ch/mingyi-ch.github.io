@@ -13,7 +13,7 @@
 }
 
 .name{
-  font-size: 2em;
+  font-size: 1em;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.894);
 }
@@ -59,7 +59,7 @@
   width: 100%;
   height: var(--headerHeight);
   /* font-size: 20px; */
-  cursor: pointer;
+  /* cursor: pointer; */
   background-color: rgb(255, 255, 255);
   color: black;
   /* border-right: none ; */
