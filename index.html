@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="author" content="Ming Yi">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prajna Temple(DEMO)</title>
+  <title>般若寺(DEMO)</title>
   <link rel = "stylesheet" href="styles/style.css"/>
 </head>
 <body>
@@ -13,26 +13,36 @@
 <!-- Sidebar -->
 <div id="mySidebar" class="sidebar">
   <nav>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <a href="#">首页</a>
+    <a href="#">资讯</a>
+    <a href="#">禅修及义工</a>
+    <a href="#">般若农场</a>
   </nav>
 </div>
 
-  
+<!-- header-->
+<div class = "header">  
+  <img  src="images/logo.png" class = "logo" alt= "logo"/>
+  <button id="navBtn" onclick="changeNav()">
+    &#9776; 
+  </button>
+</div>
+
+<!-- header: row-->
+<div class="headerContainer">
+  <nav class = "headerRow">  
+    <img  src="images/logo.png" class = "logo" alt= "logo"/>
+    <a href="#">首页</a>
+    <a href="#">资讯</a>
+    <a href="#">禅修及义工</a>
+    <a href="#">般若农场</a>
+  </nav>
+</div>
+
 <!-- Page content -->
 <div id="main">
-  <div class = "header">  
-    <div class = "logoName">
-      <img  src="images/logo.png" class = "logo" alt= "logo"/>
-      <div class = "name">Prajna Temple</div>
-    </div>
-    <button id="navBtn" onclick="changeNav()">
-      &#9776; 
-    </button>
-  </div>
   <p class = "text">
+    <img class = "pics" src="./images/prajna_temple.jpg" alt="prajna_temple pics"/>
     CSS (siglas en inglés de Cascading Style Sheets), en español «Hojas de estilo en cascada», es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.2​ Es muy usado para establecer el diseño visual de los documentos web, e interfaces de usuario escritas en HTML o XHTML; el lenguaje puede ser aplicado a cualquier documento XML, incluyendo XHTML, SVG, XUL, RSS, etcétera. Junto con HTML y JavaScript, CSS es una tecnología usada por muchos sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web y GUIs para muchas aplicaciones móviles (como Firefox OS).3​
 
   CSS está diseñado principalmente para marcar la separación del contenido del documento y la forma de presentación de este, características tales como las capas o layouts, los colores y las fuentes.4​ Esta separación busca mejorar la accesibilidad del documento, proveer más flexibilidad y control en la especificación de características presentacionales, permitir que varios documentos HTML compartan un mismo estilo usando una sola hoja de estilos separada en un archivo .css, y reducir la complejidad y la repetición de código en la estructura del documento.

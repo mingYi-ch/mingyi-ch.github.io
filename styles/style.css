@@ -1,15 +1,16 @@
-
+/* mobile first : @media screen and (max-width: 768px) */
 /* Declare variable */
 :root {
   --headerHeight: 60px;
-  --sidebar-top: 61px;
+  --sidebar-top:  61px;
   --mainMarginTop:65px;
 }
 
 .logo {
   border-radius: 8px; 
-  width: 80px;
-  height: 50px;
+  width: 75px;
+  height: 58px;
+  padding-right: 3px;
 }
 
 .name{
@@ -23,6 +24,20 @@
   align-items: center;
 
 }
+
+
+/* Position and style the close button (top right corner) */
+.sidebar {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(253, 253, 253, 0.952);
+  font-size: 36px;
+  height: 100%;
+  width: 100%;
+  top: var(--sidebar-top);
+  display: none;
+}
+
 /* The sidebar links */
 .sidebar a {
   padding: 8px 8px 8px 32px;
@@ -36,18 +51,6 @@
 /* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
   color: goldenrod;
-}
-
-/* Position and style the close button (top right corner) */
-.sidebar {
-  position: fixed;
-  z-index: 1;
-  background-color: rgba(253, 253, 253, 0.952);
-  font-size: 36px;
-  height: 100%;
-  width: 100%;
-  top: var(--sidebar-top);
-  display: none;
 }
 
 .header {
@@ -68,6 +71,9 @@
   top:0;
 }
 
+.headerRow {
+  display: none;
+}
 
 /* Mobile: The button used to open the sidebar */
 #navBtn {
@@ -75,9 +81,8 @@
   font-size: 25px;
   cursor: pointer;
   background-color: white;
-  color: rgba(0, 0, 0, 0.818);
-  /* padding: 10px 15px; */
-  margin-right: 20px;
+  color: rgba(0, 0, 0, 0.745);
+  margin-right: 5px;
   border: none;
   
 }
@@ -89,11 +94,51 @@
 /* Style page content */
 #main {
   margin-top: var(--mainMarginTop);
-  transition: margin-left .3s; /* If you want a transition effect */
+  text-align: justify;
+  font-size: 16px;
 }
 
+.pics {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+}
 
-@media screen and (max-width: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+@media screen and (min-width: 992px) {
+  .header{display: none;}
+  .headerContainer{
+    width: 100%;
+    position: fixed;
+    border-bottom: 0.01px solid rgba(0, 0, 0, 0.546) ;
+    background-color: rgba(255, 255, 255, 1);
+    height: var(--headerHeight);
+    top:0;
+  }
+  .headerRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: var(--headerHeight);
+    color: black;
+  }
+  /* The sidebar links */
+.headerRow a {
+  /* padding: 8px 8px 8px 32px; */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #190303;
+  /* display: block; */
+  transition: 0.25s;
+}
+
+.headerRow a:hover {
+  color: rgba(188, 185, 171, 0.789);
+}
+
 }
